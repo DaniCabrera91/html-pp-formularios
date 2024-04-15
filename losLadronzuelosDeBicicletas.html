@@ -12,161 +12,109 @@
     <form action="/resultado" method="post">
     
         <fieldset>
-            <legend>Fecha:</legend>
+            <legend>Fecha y hora:</legend>
                 <label for="fecha"> 
                     <input type="date" id="fecha" name="fecha" autocomplete="on">
                 </label>
-            </fieldset>
-    
-        <fieldset>
-            <legend>Hora</legend>
                 <label for="hora">
                     <input type="time" id="hora" name="hora" autocomplete="on">
                 </label>
+            </fieldset>
+
+    
+        <fieldset>
+            <legend>Color de la bicicleta:</legend>
+                <label for="color">
+                    <input type="color" id="color" name="color" required>
+                </label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Rango de precio:</legend>
+                <label for="precio">
+                    <input type="range" id="precio" name="precio" required>
+                    
+                </label>
         </fieldset>
     
-              <fieldset>
-                <legend>Sexo</legend>
-                    
-                    <input type="radio" name="Sexo" id="masculino" required value="Masculino"> 
-                    <label for="masculino">Masculino</label>
-    
-                    <input type="radio" name="Sexo" id="femenino" required value="Femenino"> 
-                    <label for="femenino">Femenino</label>
-                    
-                    <input type="radio" name="Sexo" id="neutro" required value="Neutro"> 
-                    <label for="neutro">Neutro</label>           
-              </fieldset>
-    
-              <fieldset>
-                <legend>Me siento Viejuner</legend>
-                    <label for="viejuner">
-                        <input type="checkbox" id="viejuner" name="viejuner" required>
-                    </label>
-              </fieldset>
-    
-              <fieldset>
-                <legend>Escribe algo sobre tí:</legend>
-                    <label for="info">
-                        <textarea name="info" id="info" cols="30" rows="10"></textarea>
-                    </label>
-              </fieldset>
-    
-            <legend style="padding: 5px;" ><strong> Tus circunstancias:</strong></legend>
-    
-            <fieldset>
-                <legend>Correo electrónico</legend>
-                    <label for="email">
-                        <input type="email" id="email" name="user_email" required placeholder="example@email.com">
-                    </label>
-              </fieldset>
-    
-              <fieldset>
-                <legend>Teléfono</legend>
-                    <label for="telefono">
-                        <input type="tel" id="telefono" name="telefono" required placeholder="123-456-789">
-                    </label>
-              </fieldset>      
-    
-              
-                <label for="submit" >
-                    <input type="submit" id="enviar" name="enviar" value="Enviar">
-                    <input type="reset" id="borrar" name="borrar">
-                </label>
+        
+        <fieldset>
+            <legend>Tipo de bicicleta:</legend>
+            <label for="modelo">
+            <select name="modelo" id="bicicleta">
+            <option value="modelo">Seleccione el modelo de su bicicleta</option>
+                <optgroup label="Paseo">
+                    <option value="Señorial">Señorial</option>
+                    <option value="Anti-plebeyos">Anti-plebeyos</option>
+                    <option value="PorEncimaDelHombro">PorEncimaDelHombro</option>
+                </optgroup>
+
+                <optgroup label="Montaña">
+                    <option value="Gamusinos">Gamusinos</option>
+                    <option value="Hueleflores">Hueleflores-premium</option>
+                    <option value="Fango">Fango lover</option>
+                </optgroup>
+
+                <optgroup label="Carreras">
+                    <option value="Metroymedio">Metroymedio</option>
+                    <option value="Tarde"> 3 de la tarde. Fluorescente edition</option>
+                    <option value="Grupitors">Grupitors</option>
+                </optgroup>
+            </select>
+            </label>
+        </fieldset> 
+
+        <fieldset>
+            <legend>Accesorios</legend>
+            <label for="accesorios">
+            <select multiple name="accesorios" id="accesorios">
+                <option>Ruedines</option>
+                <option>Pegatinas</option>
+                <option>Cestita</option>
+                <option>Bomba de aire</option>
+                <option>Timbre</option>
+                <option>Foco</option>
+              </select>
+            </label>
+        </fieldset>
+
+        <fieldset>
+            <legend>¿Qué marca era?:</legend>
+            <label for="marca">Seleccione la marca de su bicicleta</label>
+            <select name="marca" id="marca">
+                <option>specialized</option>
+                <option>trek</option>
+                <option>merida</option>
+                <option>scott</option>
+                <option>giant</option>
+                <option>cube</option>
+                <option>lapierre</option>
+                <option>orbea</option>
+                <option>cannondale</option>
+                <option>bmc</option>
+                <option>canyon</option>
+                <option>look</option>
+                <option>protek</option>
+                <option>megamo</option>
+                <option>pinarello</option>
+                <option>bianchi</option>
+                <option>bh</option>
+                <option>factor</option>
+                <option>ghost</option>
+                <option>cervélo</option>
+                <option>argon</option>            
+            </select>
+        </fieldset> 
+
+        <div style="padding-top: 10px;">
+            <label for="enviar" >
+                <input type="submit" id="enviar" name="enviar" value="Enviar">
+            </label>
+                
+            <label for="borrar" >
+                <input type="reset" id="borrar" name="borrar">
+            </label>
+        </div>
         </form>
-
-      
-              
-        Día: fecha
-
-        Hora: tiempo
-        
-        Color de la bicicleta: color
-        
-        Rango de precio: range
-        
-        Tipo de bicicleta: selector
-        
-            Paseo
-        
-                Señorial
-        
-                Anti-plebeyos
-        
-                PorEncimaDelHombro
-        
-            Montaña
-        
-                Gamusinos
-        
-                Hueleflores premium
-        
-                Fango lover
-        
-            Carreras
-        
-                Metroymedio
-        
-                3 de la tarde. Fluorescente edition
-        
-                Grupitors
-        
-        Accesorios: selector multiple
-        
-            Ruedines
-        
-            Pegatinas
-        
-            Cestita
-        
-            Bomba de aire
-        
-            Timbre
-        
-            Foco
-        
-        ¿Qué marca era?: Lista de datos
-        
-            specialized
-        
-            trek
-        
-            merida
-        
-            scott
-        
-            giant
-        
-            cube
-        
-            lapierre
-        
-            orbea
-        
-            cannondale
-        
-            bmc
-        
-            canyon
-        
-            look
-        
-            protek
-        
-            megamo
-        
-            pinarello
-        
-            bianchi
-        
-            bh
-        
-            factor
-        
-            ghost
-        
-            cervélo
-        
-            argon
 </body>
 </html>
